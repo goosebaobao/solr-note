@@ -72,3 +72,6 @@ http://localhost:8983/solr/tv/suggest?suggest=true&suggest.build=true \
 &suggest.dictionary=mySuggester&wt=json&suggest.q=xiyou
 ```
 
+## 实战
+
+
