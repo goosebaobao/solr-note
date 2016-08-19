@@ -67,5 +67,6 @@
 ### 如何获取建议
 
 ```bash
-http://localhost:8983/solr/tv/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester&wt=json&suggest.q=xiyou
+http://localhost:8983/solr/tv/suggest?suggest=true&suggest.build=true \
+&suggest.dictionary=mySuggester&wt=json&suggest.q=xiyou
 ```
