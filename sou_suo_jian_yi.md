@@ -106,7 +106,7 @@ http://localhost:8983/solr/tv/suggest?suggest=true&suggest.build=true \
 </requestHandler>
 ```
 
-### 修改 shcma.xml
+### 修改 schema.xml
 
 在建议组件的配置里，使用了 `tvsuggest` 字段，这个字段专用于提供搜索建议，需要在 `schema.xml` 里定义这个字段，如下
 
