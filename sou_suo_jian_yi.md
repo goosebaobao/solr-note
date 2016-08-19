@@ -59,6 +59,7 @@
 | 参数 | 说明 |
 | -- | -- |
 | suggest=true | 该参数必须为 true |
+| suggest.dictionary | 在建议组件里配置的建议器的名称。该参数是必须滴，可以在请求处理器里设置，也可以在查询时通过参数传递 |
 | suggest.q | 查找建议时用的查询 |
 | suggest.count | 指定 Solr 返回的建议数量 |
 | suggest.build | true 表示构建建议索引。仅在初次请求时有用 |
@@ -70,3 +71,4 @@
 http://localhost:8983/solr/tv/suggest?suggest=true&suggest.build=true \
 &suggest.dictionary=mySuggester&wt=json&suggest.q=xiyou
 ```
+
