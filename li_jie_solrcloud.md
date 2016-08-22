@@ -40,7 +40,15 @@ SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 
  * follow：组成 shard 的多个 replica，除了 leader 以外其他的都是 follow
 * 一个 collection 的 所有 replica(core) 使用相同的配置
 
+## 理解
 
+所以，什么是 SolrCloud？
+
+SolrCloud 可以理解为由多个 Solr 实例组成的集群。这个集群里可以有多个 collection。
+
+什么是 collection？
+
+collection 这个概念离不开 SolrCloud 的环境。一个 collection 由多个 core 组成。所有这些 core 可以在一个 solr 实例上，也可以在多个 solr 实例上。这些 core 又划分成了几组，每一组称为一个 shard。每个组里面有至少有一个 core。如果一个组里有 1 个以上的 core，那么其中必定有一个是 Leader。每一组的多个 core，其数据是一毛一样滴。这些个 core，我们称之为 replica
 
 
 
