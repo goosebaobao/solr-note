@@ -1,4 +1,4 @@
-# 搭建 Solr C# 搭建 Solr Cqlio前# 搭建 Solr C# 搭建 Solr Cqlioaund
+# 搭建 Solr Solr
 
 ## 以 cloud 模式启动
 
