@@ -18,7 +18,7 @@
 
 ## 设定主机名
 
-为了方便后续操作，在每台服务器的 /etc/hosts 文件里添加如下内容
+为了方便后续操作，在每台服务器的 `/etc/hosts` 文件里添加如下内容
 
 ```bash
 172.16.82.203 zk
@@ -27,7 +27,7 @@
 172.17.21.78 sc78
 ```
 
-同时，修改各服务器的 /etc/sysconfig/network 文件，将 HOSTNAME 修改为相应的主机名，示例如下
+同时，修改各服务器的 `/etc/sysconfig/network` 文件，将 `HOSTNAME` 修改为相应的主机名，示例如下
 
 ```bash
 NETWORKING=yes
@@ -45,7 +45,7 @@ chkconfig iptables off
 
 ## 使设置生效
 
-最后，执行 reboot 命令重启服务器
+最后，执行 `reboot` 命令重启服务器
 
 ## ZooKeeper 初始状态
 
@@ -68,4 +68,3 @@ Starting zookeeper ... STARTED
 [zk: localhost:2181(CONNECTED) 2] ls /zookeeper/quota
 []
 ```
-
