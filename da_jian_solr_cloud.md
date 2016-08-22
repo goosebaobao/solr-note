@@ -1,8 +1,8 @@
 # 搭建 Solr Cloud
 
-## 环境
+## 以 cloud 模式启动
 
-在
+登录到 sc78，以 cloud 模式启动 solr
 
-## 
+```bash
 
