@@ -1,4 +1,4 @@
-# 搭建 Solr Solr
+# 搭建 SolrCloud
 
 ## 以 cloud 模式启动
 
