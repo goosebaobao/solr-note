@@ -38,6 +38,8 @@ chkconfig iptables off
 
 最后，执行 reboot 命令重启服务器
 
+## ZooKeeper 初始状态
+
 各服务器完成重启后，先登录到 zk 上，拉起 ZooKeeper 服务
 
 ```bash
