@@ -99,3 +99,14 @@ Solr process 2240 running on port 8983
 ![](sc2.PNG)
 
 显示的实际上是 ZooKeeper 的信息，其中 /live_nodes 节点下有一个名为 172.17.21.78:8983_solr 的文件，这表示 SolrCloud 上当前有一个节点，该节点是运行在 172.17.21.78 上，监听端口为 8983 的 solr 实例。
+
+我们连接到 zk 上看下是否如此
+
+```bash
+[zk: localhost:2181(CONNECTED) 0] ls /
+[sc, zookeeper]
+[zk: localhost:2181(CONNECTED) 1] ls /sc
+[security.json, clusterstate.json, aliases.json, live_nodes, overseer, overseer_elect, collections]
+[zk: localhost:2181(CONNECTED) 2] ls /sc/live_nodes
+[172.17.21.78:8983_solr]
+```
