@@ -28,7 +28,19 @@ SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 
 
 ### node 节点
 
-SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是一个 node。
+SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是一个 node。一个 SolrCloud 完全可以
+
+### collection 集合
+
+collection 和单机模式的 core 是对应的。在 cloud 模式下，服务于某个业务需求的文档集合就是一个 collection。
+
+### shard 分片
+
+collection 由 shard 组成。或者说，我们把 collection 切分成一个或多个 shard。每个 shard 都拥有 collection 里的部分文档。
+
+### replica 副本
+
+一个 shard 由多个 replica 组成。
 
 
 
