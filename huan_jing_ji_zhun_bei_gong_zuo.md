@@ -11,6 +11,8 @@
 | sc77 | Solr 5.5.2 | 172.17.21.77 |
 | sc78 | Solr 5.5.2 | 172.17.21.78 |
 
+`ZooKeeper` 和 `Solr` 的安装下载这里不再赘述，其安装目录分别为 `/data/zookeeper` 和 `/data/solr`
+
 为了方便后续操作，在每台服务器的 /etc/hosts 文件里添加如下内容
 
 ```bash
@@ -35,4 +37,23 @@ chkconfig iptables off
 ```
 
 最后，执行 reboot 命令重启服务器
+
+各服务器完成重启后，先登录到 zk 上，拉起 ZooKeeper 服务
+
+```bash
+[root@zk ~]# /data/zookeeper/bin/zkServer.sh start
+ZooKeeper JMX enabled by default
+Using config: /data/zookeeper/bin/../conf/zoo.cfg
+Starting zookeeper ... STARTED
+```
+
+然后执行 zkcli.sh 连接到 ZooKeeper，并执行 ls 命令，可以看到当前 ZooKeeper 上只有一个 znode
+```bash
+[zk: localhost:2181(CONNECTED) 0] ls /
+[zookeeper]
+[zk: localhost:2181(CONNECTED) 1] ls /zookeeper
+[quota]
+[zk: localhost:2181(CONNECTED) 2] ls /zookeeper/quota
+[]
+```
 
