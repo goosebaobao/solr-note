@@ -15,9 +15,9 @@
 
 > **关于ZooKeeper**
 > 
-> 如果是生产环境，肯定会使用 ZooKeeper 集群，也就是最少 3 个 ZooKeeper 实例。这里因为是个学习环境，就使用单个 ZooKeeper 来搭建 SolrCloud
+> 如果是生产环境，肯定会使用 `ZooKeeper` 集群，也就是最少 3 个 `ZooKeeper` 实例。这里因为是个学习环境，就使用单个 `ZooKeeper` 来搭建 `SolrCloud`
 > 
-> 无论是 ZooKeeper集群环境的搭建，还是将 SolrCloud 从单个 ZooKeeper 实例迁移到 ZooKeeper 集群都是很简单的，不再赘述 
+> 无论是 `ZooKeeper` 集群环境的搭建，还是将 `SolrCloud` 从单个 `ZooKeeper` 实例迁移到 `ZooKeeper` 集群都是很简单的，不再赘述 
 
 ## 设定主机名
 
