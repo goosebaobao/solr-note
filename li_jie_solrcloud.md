@@ -48,7 +48,7 @@ SolrCloud 可以理解为至少一个 Solr 实例组成的集群。这个集群�
 
 什么是 collection？
 
-collection 这个概念离不开 SolrCloud 的环境。一个 collection 由至少一个 core 组成。所有这些 core 可以在至少一个 solr 实例上。所有这些 core 又划分成了几组，每一组都拥有 collection 的一部分数据，这样的一个组称为一个 shard。每个组里面有至少有一个 core。如果一个组里有一个以上的 core，那么其中必定有一个是 Leader。每一组的多个 core，其数据是一毛一样滴。这些个 core，我们称之为 replica
+collection 这个概念离不开 SolrCloud 的环境。一个 collection 由至少一个 core 组成。所有这些 core 可以在至少一个 solr 实例上。所有这些 core 又划分成了至少一个组，每一组都拥有 collection 的一部分数据，这样的一个组称为一个 shard。每个组里面有至少有一个 core。如果一个组里有一个以上的 core，那么其中必定有一个是 Leader。每一组的多个 core，其数据是一毛一样滴。这些个 core，我们称之为 replica
 
 
 
