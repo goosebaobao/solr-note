@@ -22,6 +22,14 @@ solr 使用 core 来管理数据。我们都知道，solr 以文档为单位管�
 
 一个 solr 实例上可以创建多个 core，每个 core 都是为了满足特定的业务需求而创建的。这有点类似于关系型数据库 mysql，core 就像是 mysql 里的数据库
 
+## SolrCloud
+
+SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 Solr 实例组成了 SolrCloud。相应的，SolrCloud 也有几个基本的概念需要理解
+
+### node 节点
+
+SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是一个 node。
+
 
 
 
