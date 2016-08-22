@@ -28,5 +28,11 @@ HOSTNAME=zk
 GATEWAY=172.17.21.1
 ```
 
+执行如下命令，关闭防火墙
 
+```bash
+chkconfig iptables off
+```
+
+最后，执行 reboot 命令重启服务器
 
