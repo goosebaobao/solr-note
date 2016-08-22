@@ -40,6 +40,8 @@ GATEWAY=172.17.21.1
 chkconfig iptables off
 ```
 
+## 使设置生效
+
 最后，执行 reboot 命令重启服务器
 
 ## ZooKeeper 初始状态
