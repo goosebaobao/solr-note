@@ -27,10 +27,8 @@ solr 使用 core 来管理数据。我们都知道，solr 以文档为单位管�
 SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 Solr 实例组成了 SolrCloud。相应的，SolrCloud 也有几个基本的概念需要理解
 
 ### 逻辑概念
-* collection 集合
- * collection 和单机模式的 core 是对应的。在 cloud 模式下，服务于某个业务需求的文档集合就是一个 collection。一个 SolrCloud 上可以创建一个或多个 collection。
-* shard 分片
- * collection 由 shard 组成。或者说，我们把 collection 切分成一个或多个 shard。每个 shard 都拥有 collection 里的部分文档。
+* collection 集合：collection 和单机模式的 core 是对应的。在 cloud 模式下，服务于某个业务需求的文档集合就是一个 collection。一个 SolrCloud 上可以创建一个或多个 collection。
+* shard 分片：collection 由 shard 组成。或者说，我们把 collection 切分成一个或多个 shard。每个 shard 都拥有 collection 里的部分文档。
 
 ### node 节点
 
