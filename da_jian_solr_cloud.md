@@ -56,12 +56,14 @@ Created /sc
 然后在 sc78 上重新启动 solr cloud
 
 停止 solr 进程
+
 ```bash
 [root@sc78 ~]# /data/solr/bin/solr stop
 Sending stop command to Solr running on port 8983 ... waiting 5 seconds to allow Jetty process 1871 to stop gracefully.
 ```
 
 以 cloud 模式启动 solr
+
 ```bash
 [root@sc78 ~]# /data/solr/bin/solr start -cloud -z zk:2181/sc
 Waiting up to 30 seconds to see Solr running on port 8983 [/]
@@ -69,6 +71,7 @@ Started Solr server on port 8983 (pid=2240). Happy searching!
 ```
 
 查看 solr 状态
+
 ```bash
 [root@sc78 ~]# /data/solr/bin/solr status
 
@@ -86,3 +89,11 @@ Solr process 2240 running on port 8983
     "liveNodes":"1",
     "collections":"0"}}
 ```
+
+通过浏览器访问 solr 管理页面 http://sc78:8983/solr/#/
+
+![solr admin](sc1.PNG)
+
+可以看到 SolrCloud 已经成功启动
+
+
