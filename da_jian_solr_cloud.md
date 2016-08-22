@@ -92,10 +92,10 @@ Solr process 2240 running on port 8983
 
 通过浏览器访问 solr 管理页面 http://sc78:8983/solr/#/
 
-
+![](sc1.PNG)
 
 可以看到 SolrCloud 已经成功启动，点击左侧菜单栏的 Cloud-Tree
 
 ![](sc2.PNG)
 
-
+显示的实际上是 ZooKeeper 的信息，其中 /live_nodes 节点下有一个名为 172.17.21.78:8983_solr 的文件，这表示当前有一个节点，即 运行在 172.17.21.78 上，监听端口为 8983 的 solr 实例。
