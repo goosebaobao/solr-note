@@ -13,6 +13,10 @@
 
 `ZooKeeper` 和 `Solr` 的安装下载这里不再赘述，其安装目录分别为 `/data/zookeeper` 和 `/data/solr`
 
+> 关于ZooKeeper
+> 
+> 如果是生产环境，肯定会使用 ZooKeeper 集群，也就是最少 3 个 ZooKeeper 实例。这里因为是个学习环境，就使用单个 ZooKeeper 来搭建 SolrCloud
+
 ## 设定主机名
 
 为了方便后续操作，在每台服务器的 /etc/hosts 文件里添加如下内容
