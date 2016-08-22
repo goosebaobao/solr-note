@@ -13,6 +13,8 @@
 
 `ZooKeeper` 和 `Solr` 的安装下载这里不再赘述，其安装目录分别为 `/data/zookeeper` 和 `/data/solr`
 
+## 设定主机名
+
 为了方便后续操作，在每台服务器的 /etc/hosts 文件里添加如下内容
 
 ```bash
