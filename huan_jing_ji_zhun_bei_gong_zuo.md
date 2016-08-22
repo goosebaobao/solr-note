@@ -40,7 +40,7 @@ chkconfig iptables off
 
 ## ZooKeeper 初始状态
 
-各服务器完成重启后，先登录到 zk 上，拉起 ZooKeeper 服务
+各服务器完成重启后，先登录到 `zk` 上，拉起 `ZooKeeper` 服务
 
 ```bash
 [root@zk ~]# /data/zookeeper/bin/zkServer.sh start
@@ -49,7 +49,8 @@ Using config: /data/zookeeper/bin/../conf/zoo.cfg
 Starting zookeeper ... STARTED
 ```
 
-然后执行 zkcli.sh 连接到 ZooKeeper，并执行 ls 命令，可以看到当前 ZooKeeper 上只有一个 znode
+然后执行 `zkcli.sh` 连接到 `ZooKeeper`，并执行 `ls` 命令，可以看到当前 `ZooKeeper` 上只有一个 `znode`
+
 ```bash
 [zk: localhost:2181(CONNECTED) 0] ls /
 [zookeeper]
