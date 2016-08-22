@@ -1,4 +1,4 @@
-# 搭建 Solr Cloud
+# 搭建 Solr C# 搭建 Solr Cqlio前# 搭建 Solr C# 搭建 Solr Cqlioaund
 
 ## 以 cloud 模式启动
 
@@ -98,4 +98,4 @@ Solr process 2240 running on port 8983
 
 ![](sc2.PNG)
 
-显示的实际上是 ZooKeeper 的信息，其中 /live_nodes 节点下有一个名为 172.17.21.78:8983_solr 的文件，这表示当前有一个节点，即 运行在 172.17.21.78 上，监听端口为 8983 的 solr 实例。
+显示的实际上是 ZooKeeper 的信息，其中 /live_nodes 节点下有一个名为 172.17.21.78:8983_solr 的文件，这表示 SolrCloud 上当前有一个节点，该节点是运行在 172.17.21.78 上，监听端口为 8983 的 solr 实例。
