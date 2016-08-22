@@ -71,7 +71,7 @@ Starting zookeeper ... STARTED
 
 ## Solr 初始状态
 
-登录到任意一个安装了 solr 的服务器上，查看一下初始目录结构
+登录到任意一个安装了 `solr` 的服务器上，查看一下初始目录结构
 
 ```bash
 [root@zk solr]# ll /data/solr/server/solr
@@ -82,4 +82,4 @@ drwxr-xr-x 5 root root 4096 Jun 21 11:45 configsets
 -rw-r--r-- 1 root root  518 Jun 21 11:45 zoo.cfg
 ```
 
-可以看到刚刚安装好没有创建 core 的 solr 目录下有哪些文件
+可以看到刚刚安装好没有创建 `core` 的 `solr` 目录下有哪些文件
