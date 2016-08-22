@@ -31,8 +31,11 @@ SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 
 * shard 分片：collection 由 shard 组成。或者说，我们把 collection 切分成一个或多个 shard。每个 shard 都拥有 collection 里的部分文档。
 
 ### 物理概念
-* node 节点：SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是一个 node。一个 SolrCloud 完全可以
-* replica 副本：一个 shard 由多个 replica 组成。
+* node 节点：SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是一个 node。一个 SolrCloud 完全可以由单个 node 组成。
+* 根据我们对 solr 单机模式的理解，每个 node 上都可以创建一个或多个 core
+* replica 副本：一个 shard 由多个 replica 组成。实际上每个 replica 就是一个 core。也就是说，要创建一个 replica，就必须有一个 core。replica 实际上是由 core 来承载的
+ * leader：如果一个 shard 由多个 replica 组成，那么其中必须有一个是 leader
+ * follow：组成 shard 的多个 replica，除了 leader 以外其他的都是 follow
 
 
 
