@@ -61,7 +61,7 @@ Using config: /data/zookeeper/bin/../conf/zoo.cfg
 Starting zookeeper ... STARTED
 ```
 
-然后执行 `zkcli.sh` 连接到 `ZooKeeper`，并执行 `ls` 命令，可以看到当前 `ZooKeeper` 上只有一个 `znode`
+然后执行 `zkCli.sh` 连接到 `ZooKeeper`，并执行 `ls` 命令，可以看到当前 `ZooKeeper` 上只有一个 `znode`
 
 ```bash
 [zk: localhost:2181(CONNECTED) 0] ls /
