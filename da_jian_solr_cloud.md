@@ -92,8 +92,10 @@ Solr process 2240 running on port 8983
 
 通过浏览器访问 solr 管理页面 http://sc78:8983/solr/#/
 
-![solr admin](sc1.PNG)
 
-可以看到 SolrCloud 已经成功启动
+
+可以看到 SolrCloud 已经成功启动，点击左侧菜单栏的 Cloud-Tree
+
+![](sc2.PNG)
 
 
