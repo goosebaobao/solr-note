@@ -42,7 +42,7 @@ SolrCloud 实际上是一个逻辑概念。我们可以理解为一个或多个 
 
 ## 理解
 
-所以，什么是 SolrCloud？
+所以，什么是 `SolrCloud`？
 
 SolrCloud 可以理解为至少一个 Solr 实例组成的集群。这个集群里可以没有collection，也可以有至少一个 collection，理论上来说，集群里的 collection 是没有上限滴。
 
