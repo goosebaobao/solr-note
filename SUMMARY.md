@@ -8,4 +8,5 @@
    * [理解 SolrCloud](li_jie_solrcloud.md)
    * [初探 Collection](chu_tan_collection.md)
    * [再探 Collection](zai_tan_collection.md)
+   * 三探 Collection
 
