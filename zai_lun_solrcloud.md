@@ -22,3 +22,7 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 ## 什么是 collection
 
+理解 collection，可以把它想象成数据库。Solr 是一个搜索引擎，其核心功能是对海量的文档进行索引，并在用户发起搜索请求时，找到匹配的文档返回给用户。
+
+那么 collection 就是一组文档的集合，无论是索引，查询，都是相对一个 collection 来说的。针对不同的业务，可以创建不同的 collection。
+
