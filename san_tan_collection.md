@@ -78,4 +78,4 @@ SolrCloud 的一个特性就是高可用，验证一下，在 sc77，sc78 上分
 
 ![](sc11.PNG)
 
-可以看到，test1-3 的 replica 全部变灰，意味着这几个 collection 不可用。而 test4 依然坚挺，但是可用的 replica 仅有 172.17.21.76
+可以看到，test1-3 的 replica 全部变灰，意味着这几个 collection 不可用。而 test4 依然坚挺，但是可用的 replica 仅存在于 172.17.21.76 节点上
