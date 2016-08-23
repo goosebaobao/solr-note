@@ -140,6 +140,8 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test3&numShards=
 
 这一次创建成功了，见图
 
+![](sc8.PNG)
 
+可以看到 test3 使用的的确是自定义的配置
 
 
