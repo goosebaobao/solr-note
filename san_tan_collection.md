@@ -1,6 +1,6 @@
 # 三探 Collection
 
-到现在为止，SolrCloud 仅由一个 node 组成。而我准备了 3 台服务器。很显然，这一次将要在由 3 个 node 组成的 SolrCloud 上创建 Collection
+到现在为止，SolrCloud 仅由一个 node 组成。而我准备了 3 台服务器，那就试试在由 3 个 node 组成的 SolrCloud 上创建 Collection 吧。
 
 ## 启动其他 2 个 node
 
@@ -27,7 +27,7 @@
 
 ## 创建 collection
 
-既然有 3 个 node，那么我这一次创建的 collection 就由 3 个 shard，每个 shard 各 3 个 replica 组成，还是在 sc78 上执行如下命令
+既然有 3 个 node，那么我这一次要创建的 collection 就由 3 个 shard，每个 shard 各 3 个 replica 组成。在 sc78 上执行如下命令
 
 ```bash
 [root@sc78 ~]# /data/solr/bin/solr create -c test4 -d tv -shards 3 -replicationFactor 3
@@ -74,8 +74,8 @@ SolrCloud 的一个特性就是高可用，验证一下，在 sc77，sc78 上分
 /data/solr/bin/solr stop
 ```
 
-此时，只有 sc76 依然健在，那么只能从 sc76 来访问管理页面了，从浏览器进入 `http://sc76:8983/solr/` ，进入 Cloud - Tree，如下图
+此时，只有 sc76 依然健在，那么只能从 sc76 来访问管理页面了，用浏览器打开 `http://sc76:8983/solr/` ，进入 Cloud - Tree，如下图
 
 ![](sc11.PNG)
 
-可以看到，test1-3 的 replica 全部变灰，意味着这几个 collection 不可用。而 test4 依然坚挺，但是可用的 replica 仅存在于 `172.17.21.76` 节点上
+可以看到，test1-3 的 replica 全部变灰，意味着这几个 collection 不可用。而 test4 依然坚挺，但是可用的 replica 仅存在于 `172.17.21.76` 节点上，其他节点上的 replica 同样是灰色

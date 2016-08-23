@@ -15,7 +15,7 @@ Started Solr server on port 8983 (pid=1871). Happy searching!
 * `-cloud` 表示以 `cloud` 模式启动 `solr`
 * `-z zk:2181/sc` 表示 `ZooKeeper` 连接串为 `zk:2181/sc`，即以 `zk` 上的 `/sc` 作为 `SolrCloud` 配置的根节点
 
-那么 `SolrCluoud` 启动成功了吗？我们执行 `status` 命令查看一下
+那么 `SolrCluoud` 启动成功了吗？执行 `status` 命令查看一下
 
 ```bash
 [root@sc78 ~]# /data/solr/bin/solr status

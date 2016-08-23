@@ -1,6 +1,6 @@
 # 再探 Collection
 
-如果一个 collection 只有一个 shard，而这个 shard 又只有一个 replica，那和单机模式有神马区别，捣腾 cloud 模式岂不是闲的蛋疼？所以这一次我来创建一个多 shard 多 replica 的 collection
+如果一个 collection 只有一个 shard，而这个 shard 又只有一个 replica，那和单机模式有神马区别？捣腾 cloud 模式岂不是闲的蛋疼？所以这一次我来创建一个多 shard 多 replica 的 collection
 
 ## 使用默认配置
 
@@ -90,7 +90,7 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test3&numShards=
 ERROR: Failed to create collection 'test3' due to: {172.17.21.78:8983_solr=org.apache.solr.client.solrj.impl.HttpSolrClient$RemoteSolrException:Error from server at http://172.17.21.78:8983/solr: Error CREATEing SolrCore 'test3_shard1_replica2': Unable to create core [test3_shard1_replica2] Caused by: org.wltea.analyzer.lucene.IKAnalyzer}
 ```
 
-从命令的输出可以看到，上传配置目录到 zk 成功了，但是创建 collection 失败了，看异常提示与中文分词器 IK 相关。应该是是因为在类路径里找不到 IK 的 jar 包，那么就把需要的 jar 包都复制到 /data/solr/dist 目录下
+从命令的输出可以看到，上传配置目录到 zk 成功了，但是创建 collection 失败了，看异常提示与中文分词器 IK 相关。应该是因为在类路径里找不到 IK 的 jar 包，那么就把需要的 jar 包都复制到 `/data/solr/dist` 目录下
 
 ```bash
 [root@sc78 ~]# cp mysql-connector-java-5.1.39.jar /data/solr/dist/.

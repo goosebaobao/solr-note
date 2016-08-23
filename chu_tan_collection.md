@@ -1,6 +1,6 @@
 # 探索 Collection
 
-显然，搭建 SolrCloud 的目地就是要在上面创建 collection。那么现在就来尝试一下吧
+搭建 SolrCloud 的目地就是要在上面创建 collection。那么现在就来尝试一下吧
 
 ## 创建 collection
 
