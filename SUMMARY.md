@@ -7,4 +7,5 @@
    * [搭建 SolrCloud](da_jian_solrcloud.md)
    * [理解 SolrCloud](li_jie_solrcloud.md)
    * [初探 Collection](chu_tan_collection.md)
+   * 再探 Collection
 
