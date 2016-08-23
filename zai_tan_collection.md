@@ -49,6 +49,8 @@ drwxr-xr-x 3 root root 4096 Aug 23 09:58 test2_shard2_replica2
 
 ## 自定义配置
 
-create 命令可以使用 -d 选项来指定配置目录，如果不指定的话，会使用 data_driven_schema_configs 作为默认配置。
+create 命令可以使用 -d 选项来指定配置目录，如果不指定的话，会使用 data_driven_schema_configs 作为默认配置。test1 和 test2 都是用的默认配置，那么接下来就试下自定义配置吧
+
+### 准备自定义配置
 
 
