@@ -43,6 +43,8 @@ collection test1，由一个 shard，即 shard1 组成。shard1 有一个 replic
 
 毫无疑问，这是一个最简单的 collection，实际上和单机模式下创建的 core 也没什么区别
 
+## 探索 zk
+
 接下来，探索一下步骤 1 里上传到 zk 的数据，进入 Cloud - Tree 页面，如下图
 
 ![](sc4.PNG)
@@ -65,5 +67,29 @@ drwxr-xr-x 2 root root  4096 Jun 21 11:45 lang
 -rw-r--r-- 1 root root  1148 Jun 21 11:45 synonyms.txt
 ```
 
-结论很明显，我甚至不用再逐个查看文件内容了
-## 
+结论很明显，我感觉没有必要再连接到 zk 上或者逐个查看文件内容是否一致了
+
+## 探索 replica/core
+
+collection 是由 至少一个 replica 组成的，而 replica 实际上就是 core。test1 这个 collection 的组成 shard1，而 shard1 在 172.17.21.78 上有一个 replica，那么就来验证一下
+
+```bash
+
+[root@sc78 ~]# ll /data/solr/server/solr/
+total 20
+drwxr-xr-x 5 root root 4096 Jun 21 11:45 configsets
+-rw-r--r-- 1 root root 3114 Jun 21 11:45 README.txt
+-rw-r--r-- 1 root root 2170 Jun 21 11:45 solr.xml
+drwxr-xr-x 3 root root 4096 Aug 23 08:57 test1_shard1_replica1
+-rw-r--r-- 1 root root  518 Jun 21 11:45 zoo.cfg
+[root@sc78 ~]# ll /data/solr/server/solr/test1_shard1_replica1/
+total 8
+-rw-r--r-- 1 root root  185 Aug 23 08:57 core.properties
+drwxr-xr-x 4 root root 4096 Aug 23 08:57 data
+```
+
+可以看到，的确有一个 core，其目录名为 test1_shard1_replica1，该目录下没有 conf 目录，显然这个 core 的配置是在 zk 上。
+
+进入管理页面 CoreAdmin，也可以看到相同的信息
+
+![](sc5.PNG)
