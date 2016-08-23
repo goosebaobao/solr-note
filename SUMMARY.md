@@ -9,4 +9,5 @@
    * [初探 Collection](chu_tan_collection.md)
    * [再探 Collection](zai_tan_collection.md)
    * [三探 Collection](san_tan_collection.md)
+   * 再论 SolrCloud
 
