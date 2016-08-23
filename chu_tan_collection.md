@@ -49,7 +49,7 @@ collection test1，由一个 shard，即 shard1 组成。shard1 有一个 replic
 
 ![](sc4.PNG)
 
-可以看到，在 /collections 下多出一个 test1 节点，同时在 /configs 节点下也多出了一个 test1 节点。回想创建 collection 的 url 里的 name 参数和 configName 参数，很显然，在步骤 1 里，是将 /data/solr/server/solr/configsets/data_driven_schema_configs/conf 目录下的所有文件都上传到了 zk 的 /configs/test1 节点下，然后在步骤 2 里，则是创建了 /collections/test1 节点并将 collection 的信息存储在这个节点。2 个节点使用相同的名字 test1，则说明 collection test1 使用 t/configs/test1 的配置
+可以看到，在 /collections 下多出一个 test1 节点，同时在 /configs 节点下也多出了一个 test1 节点。回想创建 collection 的 url 里的 name 参数和 configName 参数，很显然，在步骤 1 里，是将 /data/solr/server/solr/configsets/data_driven_schema_configs/conf 目录下的所有文件都上传到了 zk 的 /configs/test1 节点下，然后在步骤 2 里，则是创建了 /collections/test1 节点并将 collection 的信息存储在这个节点。2 个节点使用相同的名字 test1，则说明 collection test1 使用 /configs/test1 的配置
 
 为了验证，看一下 /data/solr/server/solr/configsets/data_driven_schema_configs/conf 目录是否和 zk 里的信息一致
 
