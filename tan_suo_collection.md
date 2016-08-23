@@ -40,3 +40,5 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test1&numShards=
 ![](sc3.PNG)
 
 collection test1，由一个 shard，即 shard1 组成。shard1 有一个 replica，该 replica 在 172.17.21.78 上的 solr 实例中。
+
+毫无疑问，这是一个最简单的 collection，实际上和单机模式下创建的 core 也没什么区别
