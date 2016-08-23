@@ -28,7 +28,7 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test1&numShards=
       "core":"test1_shard1_replica1"}}}
 ```
 
-说明
+## 执行步骤
 
 命令很简单，创建一个名称为 test1 的 collection。那么 solr 是如何执行这个命令的呢？根据 solr 的输出信息，我们看到 solr 实际执行了 2 个步骤
 
