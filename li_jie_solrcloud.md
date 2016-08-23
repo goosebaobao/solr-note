@@ -46,7 +46,7 @@ SolrCloud 由 node 组成。实际上，SolrCloud 里的每个 Solr 实例就是
 
 一个 shard 由多个 replica 组成。实际上每个 replica 就是一个 core。也就是说，要创建一个 replica，就必须有一个 core。replica 实际上是由 core 来承载的
 
-如果一个 shard 由多个 replica 组成，那么其中必须有一个是 Leader
+如果一个 shard 由多个 replica 组成，那么其中必须有一个是 Leader replica
 
 一个 collection 的 所有 replica(core) 使用相同的配置
 
