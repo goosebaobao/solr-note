@@ -4,6 +4,6 @@
 
 ## 什么是 SolrCloud
 
-SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以加入 SolrCloud，只要这些 node 启动时，使用相同的 zk 节点。
+SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以加入 SolrCloud，只要该 node 启动时，使用相同的 zk 节点。
 
 有了 SolrCloud 以后，就可以在之上创建 collection
