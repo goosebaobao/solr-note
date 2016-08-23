@@ -7,3 +7,5 @@ SolrCloud 是 solr 的集群。提供了如下的特性
 
 SolrCloud 是分布式结构，不存在所谓的 master 节点。
 
+显然，这些都是相对于 Solr 主从模式的优势。
+
