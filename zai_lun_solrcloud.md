@@ -10,6 +10,6 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 也就是说，一个新的 node 要加入一个 SolrCloud，那么它本身应该是没有任何 core 的。
 
-那么，如何区分 2 个不同的 SolrCloud？只有通过其 zk 的节点来区分，也就是说，实际上是 zk 上的某个节点唯一标识了 SolrCloud
+那么，如何区分 2 个不同的 SolrCloud？只有通过其 zk 的节点来区分，也就是说，实际上是 zk 上的某个节点唯一标识了 SolrCloud。
 
-有了 SolrCloud 以后，就可以在之上创建 collection
+有了 SolrCloud 以后，就可以在之上创建 collection，从这个意义上来说，SolrCloud 是个环境。
