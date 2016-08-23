@@ -1,6 +1,6 @@
 # 再探 Collection
 
-如果一个 collection 只有一个 shard，而这个 shard 又只有一个 replica，那和单机模式有神马区别？所以最后一次我来创建一个多 shard 多 replica 的 collection
+如果一个 collection 只有一个 shard，而这个 shard 又只有一个 replica，那和单机模式有神马区别，倒腾 cloud 模式岂不是闲的蛋疼？所以这一次我来创建一个多 shard 多 replica 的 collection
 
 ## 使用默认配置
 
