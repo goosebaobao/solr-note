@@ -2,6 +2,8 @@
 
 如果一个 collection 只有一个 shard，而这个 shard 又只有一个 replica，那和单机模式有神马区别？所以最后一次我来创建一个多 shard 多 replica 的 collection
 
+## 使用默认配置
+
 ```
 [root@sc78 ~]# /data/solr/bin/solr create -c test2 -shards 2 -replicationFactor 2
 
@@ -45,6 +47,6 @@ drwxr-xr-x 3 root root 4096 Aug 23 09:58 test2_shard2_replica2
 -rw-r--r-- 1 root root  518 Jun 21 11:45 zoo.cfg
 ```
 
-
+## 自定义配置
 
 
