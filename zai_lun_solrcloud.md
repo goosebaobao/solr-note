@@ -32,4 +32,4 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 一般来说，搜索引擎要处理的都是海量的数据。对于海量数据的处理，一个流行的做法就是分片。
 
-把一个 collection 划分成多份，每一份就是一个 shard。
+把一个 collection 划分成多份，每一份就是一个 shard。显然，不同的 shard 拥有不同的文档，一个 collection 能对外提供服务的前提是所有 shard 都正常。
