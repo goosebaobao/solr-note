@@ -24,7 +24,7 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test2&numShards=
       "core":"test2_shard1_replica2"}}}
 ```
 
-这次创建的 collection 为 test2，2 个shard，每个 shard 有 2 个 replica，结果看图
+这次创建的 collection 为 test2，2 个shard(numShards=2)，每个 shard 有 2 个 replica(replicationFactor=2)，结果看图
 
 ![](sc6.PNG)
 很显然，配置依然在 zk 上；那么 core 呢，应该是 4 个吧？
