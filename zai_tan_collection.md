@@ -53,7 +53,7 @@ create 命令可以使用 -d 选项来指定配置目录，如果不指定的话
 
 ### 准备自定义配置
 
-直接把之前在单机模式下创建的名为 tv 的 core 的配置文件复制过来吧，由于这些个配置文件在其他的服务器上，所以即打包后传送到 sc78 上，然后解压缩到 /data/solr/server/solr/configsets/tv/conf
+直接把之前在单机模式下创建的名为 tv 的 core 的配置文件复制过来吧，由于这些个配置文件在其他的服务器上，所以打包后传送到 sc78 上，解压缩后移动到 /data/solr/server/solr/configsets/tv/conf
 
 ```bash
 [root@sc78 ~]# mkdir /data/solr/server/solr/configsets/tv
