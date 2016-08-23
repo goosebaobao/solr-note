@@ -6,4 +6,8 @@
 
 SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以加入 SolrCloud，只要该 node 启动时，使用相同的 zk 节点。
 
+当然，也有例外，如果一个 node 在加入 SolrCloud 以后，发现自己的某个 core 原本不属于该 SolrCloud，那么这个 node 应该会爆出异常。
+
+什么意思呢？假定一个 node 原本属于 CloudA，但在一次启动时传递了错误的 -z 参数而加入了 CloudB，该 node 想要启动自己的 core，却无法在 zk 上找到配置，这时至少这些 core 肯定是无法启动的。
+
 有了 SolrCloud 以后，就可以在之上创建 collection
