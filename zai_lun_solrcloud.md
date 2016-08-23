@@ -26,6 +26,8 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 那么 collection 就是一组文档的集合，无论是索引，查询，都是相对一个 collection 来说的。针对不同的业务，可以创建不同的 collection。
 
+一个 SolrCloud 环境可以创建多个 collection，各个 collection 之间是互相独立的。
+
 ## 什么是 shard
 
 一般来说，搜索引擎要处理的都是海量的数据。对于海量数据的处理，一个流行的做法就是分片。
