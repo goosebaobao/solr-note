@@ -33,7 +33,7 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test1&numShards=
 命令很简单，创建一个名称为 test1 的 collection。那么 solr 是如何执行这个命令的呢？根据 solr 的输出信息，我们看到 solr 实际执行了 2 个步骤
 
 1. 将 /data/solr/server/solr/configsets/data_driven_schema_configs/conf 这个目录的内容上传到 zk 的 /sc 节点下
-2. 新建 test1 这个 collection，实际是调用了 http 接口，其 url 是 http://localhost:8983/solr/admin/collections?action=CREATE&name=test1&numShards=1&replicationFactor=1&maxShardsPerNode=1&collection.configName=test1，请求的参数有 name， numShards， replicationFactor， maxShardsPerNode， configName，所谓见名知意，这几个参数的含义应该也不难理解
+2. 新建 test1 这个 collection，实际是调用了 http 接口，其 url 是 http://localhost:8983/solr/admin/collections?action=CREATE&name=test1&numShards=1&replicationFactor=1&maxShardsPerNode=1&collection.configName=test1 ， 请求的参数有 name， numShards， replicationFactor， maxShardsPerNode， configName，所谓见名知意，这几个参数的含义应该也不难理解
 
 打开管理界面，进入 Cloud - Graph 页面，如下图
 
