@@ -4,7 +4,7 @@
 
 ## 使用默认配置
 
-```
+```bash
 [root@sc78 ~]# /data/solr/bin/solr create -c test2 -shards 2 -replicationFactor 2
 
 Connecting to ZooKeeper at zk:2181/sc ...
