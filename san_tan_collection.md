@@ -66,6 +66,8 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test4&numShards=
 
 可以看到，每个 shard 都有 3 个 replica，而这 3 个 replica 分别在不同的 node 上。这意味着，3 个节点即便挂掉任意的 2 个，collection 依然可用
 
+## SolrCloud 高可用
+
 验证一下，在 sc77，sc78 上分别停止 solr，执行
 
 ```bash
