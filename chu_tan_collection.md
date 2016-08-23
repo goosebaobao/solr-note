@@ -67,7 +67,7 @@ drwxr-xr-x 2 root root  4096 Jun 21 11:45 lang
 -rw-r--r-- 1 root root  1148 Jun 21 11:45 synonyms.txt
 ```
 
-结论很明显，我感觉没有必要再连接到 zk 上或者逐个查看文件内容是否一致了
+结论很明显，没有必要再连接到 zk 上或者逐个查看文件内容是否一致了
 
 ## 探索 replica/core
 
