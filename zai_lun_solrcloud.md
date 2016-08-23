@@ -22,9 +22,9 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 ## 什么是 collection
 
-理解 collection，可以把它想象成数据库。Solr 是一个搜索引擎，其核心功能是对海量的文档进行索引，并在用户发起搜索请求时，找到匹配的文档返回给用户。
+理解 collection，可以把它想象成数据库。Solr 是一个搜索引擎，其核心功能是对海量的 document 进行索引，并在用户发起搜索请求时，找到匹配的 document 返回给用户。
 
-那么 collection 就是一组文档的集合，无论是索引，查询，都是相对一个 collection 来说的。针对不同的业务，可以创建不同的 collection。
+那么 collection 就是一组 document 的集合，无论是索引，查询，都是相对一个 collection 来说的。针对不同的业务，可以创建不同的 collection。
 
 一个 SolrCloud 环境可以创建多个 collection，各个 collection 之间是互相独立的。
 
@@ -32,4 +32,11 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 一般来说，搜索引擎要处理的都是海量的数据。对于海量数据的处理，一个流行的做法就是分片。
 
-把一个 collection 划分成多份，每一份就是一个 shard。显然，不同的 shard 拥有不同的文档，一个 collection 能对外提供服务的前提是所有 shard 都正常。
+把一个 collection 划分成多份，每一份就是一个 shard。显然，不同的 shard 拥有不同的 document，一个 collection 能对外提供服务的前提是所有 shard 都正常。
+
+将一个 collection 切分为多少个 shard 取决于
+
+1. collection 里的 document 数量，并不仅仅是实际数量，还应考虑到未来的增量，即理论上的总量
+2. 搜索请求的并发数
+
+显然，设计 shard 数量，既要考虑到更易于处理海量的文档，也要考虑到搜索的并发性能
