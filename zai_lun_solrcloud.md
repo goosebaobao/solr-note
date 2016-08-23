@@ -19,3 +19,6 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 一个 node 就是一个 solr 进程，或曰 solr 实例。它有 2 个关键属性：ip 和 端口。
 
 这也意味着，多个 node 可以共存在同一个物理服务器上。所以，不能仅根据 node 的数量是否大于 1 来判断 SolrCloud 是否高可用。
+
+## 什么是 collection
+
