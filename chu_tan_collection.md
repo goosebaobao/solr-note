@@ -2,7 +2,7 @@
 
 显然，搭建 SolrCloud 的目地就是要在上面创建 collection。那么现在就来尝试一下吧
 
-## 创建第一个 collection
+## 创建 collection
 
 如前所述，我已经在 sc78 上运行起了 SolrCloud。虽然这个 SolrCloud 仅由一个 node 组成，但其管理后台有 Cloud 菜单已充分证明 solr 的确运行在 cloud 模式下。现在就在这个 SolrCloud 上创建一个 collection 吧
 
