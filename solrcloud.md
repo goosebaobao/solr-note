@@ -1,4 +1,4 @@
-# Solr Cloud
+# SolrCloud
 
 SolrCloud 是 solr 的集群。提供了如下的特性
 
