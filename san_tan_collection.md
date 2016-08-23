@@ -74,7 +74,7 @@ SolrCloud 的一个特性就是高可用，验证一下，在 sc77，sc78 上分
 /data/solr/bin/solr stop
 ```
 
-此时，只有 sc76 依然健在，那么只能从 sc76 来访问管理页面了，从浏览器进入 http://sc76:8983/solr/，进入 Cloud - Tree，如下图
+此时，只有 sc76 依然健在，那么只能从 sc76 来访问管理页面了，从浏览器进入 `http://sc76:8983/solr/` ，进入 Cloud - Tree，如下图
 
 ![](sc11.PNG)
 
