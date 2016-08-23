@@ -68,7 +68,7 @@ http://localhost:8983/solr/admin/collections?action=CREATE&name=test4&numShards=
 
 ## SolrCloud 高可用
 
-验证一下，在 sc77，sc78 上分别停止 solr，执行
+SolrCloud 的一个特性就是高可用，验证一下，在 sc77，sc78 上分别停止 solr，执行
 
 ```bash
 /data/solr/bin/solr stop
