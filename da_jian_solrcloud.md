@@ -39,14 +39,14 @@ ERROR: Failed to get system information from http://localhost:8983/solr due to: 
 Typically, this indicates a problem with the Solr server; check the Solr server logs for more information.
 ```
 
-看来 `Solr` 确实启动了，但是无法获取系统信息。经过检查，我们发现这是因为 `ZooKeeper` 上木有 `/sc` 这个节点的原因，我们连接到 `zk` 上运行 `zkCli.sh` 脚本，执行 `ls` 命令，如下
+看来 `Solr` 确实启动了，但是无法获取系统信息。经过检查，发现这是因为 `ZooKeeper` 上木有 `/sc` 这个节点的原因，连接到 `zk` 上运行 `zkCli.sh` 脚本，执行 `ls` 命令，如下
 
 ```bash
 [zk: localhost:2181(CONNECTED) 0] ls /
 [zookeeper]
 ```
 
-可见，当前 `zk` 上仅有一个节点：`/zookeeper`。所以我们先在 `zk` 上创建 `/sc` 节点
+可见，当前 `zk` 上仅有一个节点：`/zookeeper`。所以要先在 `zk` 上创建 `/sc` 节点
 
 ```bash
 [zk: localhost:2181(CONNECTED) 1] create /sc null
