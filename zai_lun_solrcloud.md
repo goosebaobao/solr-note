@@ -36,10 +36,8 @@ SolrCloud 是一个环境，由至少一个 node 组成。任何 node 都可以�
 
 将一个 collection 切分为多少个 shard 取决于
 
-1. collection 里的 document 数量，并不仅仅是实际数量，还应考虑到未来的增量，即理论上的总量
-2. 搜索请求的并发数
-
-规划 shard 数量，既要考虑到更易于添加、索引、存储海量的文档，也要考虑到搜索的并发性能。
+1. collection 里的 document 数量，并不仅仅是实际数量，还应考虑到未来的增量，即理论上的总量。一般来说，单个 shard 能高效处理的 document 数量是有上限的，当文档数量达到上限以后，性能会下降。
+2. 单个查询请求需要并行的由几个 shard 来处理
 
 ## 什么是 replica
 
@@ -49,11 +47,13 @@ collection 划分为多个 shard 后，实际上增加了可用性的风险：�
 
 当一个 shard 有多个 replica 时，其中必须有一个是 Leader replica。这是因为 replica 不仅是数据的冗余，还负责对用户的搜索请求进行处理。
 
+请注意，shard 虽然有个 Leader replica，但不表示 shard 是主从模式。Leader 仅仅是在索引时做了一点额外的工作，但 Leader 和其他 replica 是平等的，没有主从之别
+
 所以说，replica 实际是 shard 的物理具现。从物理上来说，每个 replica 都以 core 的形式存在。同一个 collection 里的所有 replica，使用同样的配置。
 
 那么，如何决定一个 shard 有几个 replica 呢？
 
 1. 取决于可用性要求。replica 越多，可用性越高。当然，前提是 replica 在不同的服务器上。如果有 3 台服务器，那么每个 shard 有 3 个 replica 的可用性肯定大于 2 个 replica。
-2. 取决于性能要求，即搜索请求的并发数。并发数越大，要求的 replica 越多。这是因为 replica 是以 core 的形式存在的，而搜索请求最终总是由 core 来执行的。
+2. 取决于性能要求，即搜索请求的并发数，也就是负载均衡的需要。一个 shard 里的每个 replica 都可以响应搜索请求，也即在响应搜索请求时，Leader 和 非 Leader 的replica 是平等的，这意味着 replica 越多并发性能越好。
 
 建议 replica 的数量不要高于物理服务器的数量，因为 replica 的数量等于物理服务器的数量时已经达到最大的可用性了，再多的话。。。哦，考虑到磁盘的故障，例如某个扇区的损坏，貌似更多的 replica 对于保证数据的安全还是有意义滴
