@@ -10,8 +10,6 @@
 * 服务器不是 Leader，文档会转发给 Leader
 * 服务器是 Leader，SolrCloud 判断文档应该发送到哪个 shard，转发文档到该 shard 的 Leader 上索引
 
-
-
 ## 分布式查询
 
 ![](sc_query.png)
