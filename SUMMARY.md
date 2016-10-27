@@ -13,4 +13,5 @@
    * [分布式索引和查询](fen_bu_shi_suo_yin_he_cha_xun.md)
 * [Solr 更新处理](solr_geng_xin_chu_li.md)
 * [提高匹配度之MM大法](ti_gao_pi_pei_du_zhi_mm_da_fa.md)
+* [python client](python_client.md)
 
