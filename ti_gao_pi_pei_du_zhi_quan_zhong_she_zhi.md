@@ -1,8 +1,6 @@
 # 提高匹配度之权重设置
 
-## 参数介绍
-
-DisMax/eDisMax 有个 qf 参数
+在 [短语匹配](ti_gao_pi_pei_du_zhi_duan_yu_pi_pei.md) 里已经介绍过短语匹配字段可以设置不同的加权因子，那么如果不要求短语匹配的情况下，能否为不同字段设置不同加权因子呢？答案是肯定滴，DisMax/eDisMax 的 `qf` 参数就可以做到
 
 ### qf
 
