@@ -1,6 +1,7 @@
 # Summary
 
 * [关于本书](README.md)
+* [python client](python_client.md)
 * [搜索建议](sou_suo_jian_yi.md)
 * [SolrCloud](solrcloud.md)
    * [环境及准备工作](huan_jing_ji_zhun_bei_gong_zuo.md)
@@ -13,5 +14,6 @@
    * [分布式索引和查询](fen_bu_shi_suo_yin_he_cha_xun.md)
 * [Solr 更新处理](solr_geng_xin_chu_li.md)
 * [提高匹配度之MM大法](ti_gao_pi_pei_du_zhi_mm_da_fa.md)
-* [python client](python_client.md)
+* [提高匹配度之权重设置](ti_gao_pi_pei_du_zhi_quan_zhong_she_zhi.md)
+* [提高匹配度之短语匹配](ti_gao_pi_pei_du_zhi_duan_yu_pi_pei.md)
 
