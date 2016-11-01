@@ -17,4 +17,5 @@
 * [提高匹配度之短语匹配](ti_gao_pi_pei_du_zhi_duan_yu_pi_pei.md)
 * [提高匹配度之权重设置](ti_gao_pi_pei_du_zhi_quan_zhong_she_zhi.md)
 * [提高匹配度之查询字段](ti_gao_pi_pei_du_zhi_cha_xun_zi_duan.md)
+* [提高匹配度之加权查询](ti_gao_pi_pei_du_zhi_jia_quan_cha_xun.md)
 
