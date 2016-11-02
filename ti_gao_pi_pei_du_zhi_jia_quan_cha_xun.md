@@ -58,14 +58,12 @@ DixMax/eDisMax 提供了 `bq` 参数，也许可以满足这样的需求
 `bq` 参数提供了一个子查询，满足该子查询的文档其匹配度会提升。如果有多个条件都要加权，可以传递多个 `bq` 参数，其格式如下
 
 ```
-bq=查询1^加权因子1&b1=查询2^加权因子2&...&bq=查询n^加权因子n
+bq=查询1^加权因子1&bq=查询2^加权因子2&...&bq=查询n^加权因子n
 ```
 
 先看下不支持 `bq` 参数的标准查询解析器的结果
 
 ```json
-
-
 {
   "responseHeader":{
     "status":0,
@@ -138,7 +136,7 @@ bq=查询1^加权因子1&b1=查询2^加权因子2&...&bq=查询n^加权因子n
 
 再换个条件试一下，这次试试能否将原本排在榜尾的 `神奇猪猪侠历险记` 往前排，加权条件为 `heat=99`
 
-```
+```json
 {
   "responseHeader":{
     "status":0,
@@ -183,7 +181,7 @@ bq=heat:99^2
 
 结果
 
-```python
+```json
 {
   "responseHeader": {
     "status": 0,
@@ -235,7 +233,7 @@ bq=heat:99^2
 查询 url
 
 ```
-view-source:http://dev:8983/solr/tv/select?bq=heat:99&defType=edismax&fl=name,heat,score&indent=on&q=%E9%92%A2%E9%93%81%E4%BE%A0&wt=json&bq=type:2
+http://dev:8983/solr/tv/select?bq=heat:99&defType=edismax&fl=name,heat,score&indent=on&q=%E9%92%A2%E9%93%81%E4%BE%A0&wt=json&bq=type:2
 ```
 
 查询结果
