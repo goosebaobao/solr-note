@@ -271,7 +271,7 @@ http://dev:8983/solr/tv/select?bq=heat:99&defType=edismax&fl=name,heat,score&ind
   }}
 ```
 
-啊哈，`神奇猪猪侠历险记` 终于排第一啦
+啊哈，`神奇猪猪侠历险记` 再次胜出
 
 ## 结论
 
