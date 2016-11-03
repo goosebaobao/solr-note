@@ -83,8 +83,9 @@
 
 DisMax/eDisMax 的 tie 参数，用于指示在多个字段都匹配到搜索关键字时如何计算最终的得分，假设各个字段各自的评分是 $$s_1,s_2,\ldots,s_n$$，则其计算公式如下
 
-1. $$mainscore = max(s_1, s_2, \ldots , s_n)$$
-2. $$score = maxscore + tie * (\sum(s_1, s_2, \ldots , s_n) - mainscore)$$
+$$
+score = max(s_1, s_2, \ldots , s_n) + tie * (\sum(s_1, s_2, \ldots , s_n) - max(s_1, s_2, \ldots , s_n))
+$$
 
 `tie` 的取值范围是 `[0, 1]`，默认情况下，`tie = 0`，solr 建议 `tie=0.1`
 
